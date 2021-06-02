@@ -1,0 +1,3 @@
+docker network create -d bridge asd02_network
+docker run -d --network=asd02_network -p 80:80 --name=container_nginx nginx 
+docker run -d --network=asd02_network -p 3306:3306 --name=container_mysql -e MYSQL_ROOT_PASSWORD=root mysql
